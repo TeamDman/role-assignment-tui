@@ -1,0 +1,29 @@
+[package]
+name = "role-assignment-tui"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+arbitrary = { version = "1.4.1", features = ["derive"] }
+clap = { version = "4.5.43", features = ["derive"] }
+color-eyre = "0.6.5"
+eyre = "0.6.12"
+tracing = "0.1.41"
+tracing-subscriber = "0.3.19"
+cloud_terrastodon_azure = "0.24.0"
+cloud_terrastodon_user_input = "0.24.0"
+cloud_terrastodon_command = "0.24.0"
+tokio = { version = "1.47.1", features = ["full"] }
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.143"
+itertools = "0.14.0"
+ratatui = "0.29.0"
+
+
+# comment out if you ain't me
+[patch.crates-io]
+# Use local Cloud Terrastodon crates from D:/Repos/Azure/Cloud-Terrastodon/crates
+cloud_terrastodon_azure = { path = "D:/Repos/Azure/Cloud-Terrastodon/crates/azure" }
+cloud_terrastodon_user_input = { path = "D:/Repos/Azure/Cloud-Terrastodon/crates/user_input" }
+cloud_terrastodon_command = { path = "D:/Repos/Azure/Cloud-Terrastodon/crates/command" }
+
